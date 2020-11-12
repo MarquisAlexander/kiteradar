@@ -6,14 +6,15 @@ import { Card, Info, Name, Price, CardLocation, Location, Image } from './styles
 
 import logo from '../../assets/logo.png';
 import logo01 from '../../assets/logo01.png';
+import logo02 from '../../assets/logo02.png';
 
 const RoutesDrawer = createDrawerNavigator();
 
-const Anuncios: React.FC = () => {
+const Anuncios: React.FC = ({ navigation }) => {
     return (
         <>
             <ScrollView>
-                <TouchableOpacity onPress={() => { }}>
+                <TouchableOpacity onPress={() => navigation.navigate('AboutItens')}>
 
                     <Card>
                         <Image source={logo} />
@@ -28,10 +29,14 @@ const Anuncios: React.FC = () => {
                         <CardLocation>
                             <Location>Maxaranguape/Rio Grande do Norte</Location>
                         </CardLocation>
+
                     </Card>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
 
                     <Card>
-                        <Image source={logo01} />
+                        <Image source={logo02} />
                         <Info>
                             <Name>
                                 Kit KiteSurf
@@ -44,6 +49,9 @@ const Anuncios: React.FC = () => {
                             <Location>Maxaranguape/Rio Grande do Norte</Location>
                         </CardLocation>
                     </Card>
+                </TouchableOpacity>
+
+                <TouchableOpacity>
 
                     <Card>
                         <Image source={logo01} />

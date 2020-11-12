@@ -2,7 +2,7 @@ import React from 'react';
 
 import { View, Text, TouchableOpacity } from 'react-native';
 
-const Profile: React.FC = () => {
+const AboutItens: React.FC = () => {
     return (
         <View>
             <Text>ola mundo prfile</Text>
@@ -10,4 +10,4 @@ const Profile: React.FC = () => {
     )
 };
 
-export default Profile;
+export default AboutItens;

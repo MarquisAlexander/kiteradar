@@ -12,7 +12,7 @@ import Input from '../../components/Input';
 import Button from '../../components/Button';
 
 
-import { Container, Title, Image } from './styles';
+import { Container, Title, Image, ButtonCreateUser, ButtonCreateUserText } from './styles';
 
 interface SignUpFormData {
     email: string;
@@ -48,6 +48,9 @@ const Logon: React.FC = () => {
         }
     }, []);
 
+    function handleCreateUser() {
+        navigation.navigate('CreateUser');
+    }
     return (
         <>
             <StatusBar barStyle="light-content" backgroundColor="#226CE0" />
@@ -87,6 +90,11 @@ const Logon: React.FC = () => {
 
                         <Button onPress={() => formRef.current?.submitForm()}>Logar</Button>
 
+                        <ButtonCreateUser onPress={() => handleCreateUser()}>
+                            <ButtonCreateUserText>
+                                Criar conta
+                        </ButtonCreateUserText>
+                        </ButtonCreateUser>
                     </Container>
                 </ScrollView>
 

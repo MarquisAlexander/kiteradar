@@ -13,13 +13,13 @@ import Anuncios from '../pages/Anuncios';
 import MeusAnuncios from '../pages/MeusAnuncios';
 import Sair from '../pages/Sair';
 import Termos from '../pages/Termos';
+import CreateUser from '../pages/CreateUser';
+import AboutItens from '../pages/AboutItens';
 
 import ListUsers from '../pages/ListUsers';
 
 const Routes = createStackNavigator();
-const Drawer = createDrawerNavigator(
-
-);
+const Drawer = createDrawerNavigator();
 
 const DrawerRoutes: React.FC = () => (
     <Drawer.Navigator>
@@ -105,6 +105,8 @@ const AppRoutes: React.FC = () => (
             cardStyle: { backgroundColor: '#f9f9f5' },
         }}>
         <Routes.Screen name="Logon" component={Logon} />
+        <Routes.Screen name="CreateUser" component={CreateUser} />
+        <Routes.Screen name="AboutItens" component={AboutItens} />
         <Routes.Screen name="DrawerRoutes" component={DrawerRoutes} />
     </Routes.Navigator>
 );
